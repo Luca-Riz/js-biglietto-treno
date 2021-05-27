@@ -4,8 +4,7 @@
 
 
 var km = prompt('Inserisci il numero di chilometri che vuoi percorrere');
-var eta = prompt('iserisci la tua età');
-eta = parseInt(eta);
+var eta = parseInt(prompt('iserisci la tua età'));
 
 var prezzo = km * 0.21;
 
@@ -21,10 +20,8 @@ document.getElementById('km').innerHTML += km;
 document.getElementById('eta').innerHTML += eta;
 document.getElementById('prezzo').innerHTML += prezzo;
 
+//-----------------------------------calcolo risparmio--------------------------
 
-//-------------------------------------------------------------
-
-// calcolo risparmio
 var prezzoPieno = km * 0.21;
     
 if (eta < 18) {
