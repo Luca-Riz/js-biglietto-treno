@@ -29,9 +29,11 @@ var prezzoPieno = km * 0.21;
     
 if (eta < 18) {
     var scU18 = prezzoPieno * 0.2;  //sconto 20% under 18
+    scU18 = scU18.toFixed(2);
     document.getElementById('risparmio').innerHTML += scU18;
 } else if (eta > 65){
     var scO65 = prezzoPieno * 0.4;  //sconto 40% over 65
+    scO65 = scO65.toFixed(2);
     document.getElementById('risparmio').innerHTML += scO65;
 } else {
     document.getElementById('risparmio').innerHTML += '0';
