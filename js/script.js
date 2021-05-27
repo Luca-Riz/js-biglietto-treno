@@ -6,7 +6,6 @@
 var km = prompt('Inserisci il numero di chilometri che vuoi percorrere');
 var eta = prompt('iserisci la tua età');
 eta = parseInt(eta);
-// console.log(eta);
 
 var prezzo = km * 0.21;
 
@@ -18,8 +17,29 @@ if (eta < 18) {
 
 prezzo = prezzo.toFixed(2);
 
-// console.log(prezzo);
-
 document.getElementById('km').innerHTML += km;
 document.getElementById('eta').innerHTML += eta;
 document.getElementById('prezzo').innerHTML += prezzo;
+
+
+//-------------------------------------------------------------
+
+// calcolo risparmio
+var prezzoPieno = km * 0.21;
+
+if (eta < 18) {
+    var scU18 = prezzoPieno * 0.2;  //sconto 20% under 18
+} else if (eta > 65){
+    var scO65 = prezzoPieno * 0.4;  //sconto 40% over 65
+} 
+
+// console.log(prezzoPieno);
+// console.log(scU18);
+// console.log(scO65);
+
+if (scU18 > 0) {
+    document.getElementById('risparmio').innerHTML = scU18;
+} else if (scO65 > 0) {
+    document.getElementById('risparmio').innerHTML = scO65;
+}
+
